@@ -1,4 +1,4 @@
-# 🌲 Forest Cover Type Prediction – Capstone Project
+## Forest Cover Type Prediction – Capstone Project
 
 This repository contains my **Capstone Project** on predicting **forest cover type** using classical machine learning models.
 
@@ -6,7 +6,7 @@ Given cartographic features (elevation, soil type, wilderness area, distances, e
 
 ---
 
-## 📌 Problem Statement
+### Problem Statement
 
 > Build and evaluate machine learning models that can accurately predict the **Forest Cover Type** (7 classes) from cartographic variables using the Forest Cover Type dataset (UCI / Kaggle).
 
@@ -22,14 +22,14 @@ Target classes (Cover_Type: 1–7):
 
 ---
 
-## 📂 Dataset Overview
+### Dataset Overview
 
 - **Dataset name:** Forest Cover Type  
 - **Rows:** ~581,000  
 - **Columns:** 54 features + 1 target  
 - **Type:** Multiclass classification  
 
-### 🔹 Feature Types
+#### 🔹 Feature Types
 
 - **Numerical features (10)**  
   - Elevation  
@@ -44,13 +44,13 @@ Target classes (Cover_Type: 1–7):
   - **Wilderness_Area1–4** (one-hot)  
   - **Soil_Type1–40** (one-hot)  
 
-### 🎯 Target
+#### Target
 
 - `Cover_Type` – integer from **1 to 7** representing the forest cover type.
 
 ---
 
-## 🧠 Methods & Models
+### Methods & Models
 
 The notebook walks through the full ML pipeline:
 
@@ -99,19 +99,3 @@ The notebook walks through the full ML pipeline:
 6. **Tune selected models with GridSearchCV**  
 7. **Re-evaluate tuned models**  
 8. **Select final model & document insights**
-
-### 📊 Flowchart (for README)
-
-You can keep this **Mermaid** diagram in your README (GitHub renders it):
-
-```mermaid
-flowchart TD
-    A[Load Dataset] --> B[Exploratory Data Analysis]
-    B --> C[Data Preprocessing]
-    C --> D[Train-Test Split]
-    D --> E[Train Baseline Models\nRF, LR, DT, KNN, AdaBoost, ExtraTrees, GB]
-    E --> F[Evaluate & Compare Models\nScorecard]
-    F --> G[Hyperparameter Tuning\nGridSearchCV for ET, DT, KNN]
-    G --> H[Evaluate Tuned Models]
-    H --> I[Select Best Model\n(Tuned Extra Trees)]
-    I --> J[Insights & Conclusion]
